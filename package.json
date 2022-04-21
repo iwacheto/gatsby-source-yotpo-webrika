@@ -1,0 +1,39 @@
+{
+  "name": "gatsby-source-yotpo-webrika",
+  "version": "0.4.1",
+  "description": "Source plugin for yotpo with shopify products",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir .",
+    "test": "jest",
+    "prettify": "prettier --write ./src/**"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin"
+  ],
+  "author": "Pattern Brands <tech@patternbrands.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "camelcase-keys-recursive": "^0.8.3",
+    "chalk": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "babel-preset-gatsby-package": "^0.5.1",
+    "dedent": "^0.7.0",
+    "jest": "^26.6.3",
+    "nock": "^13.0.11",
+    "prettier": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iwacheto/gatsby-source-yotpo-webrika.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iwacheto/gatsby-source-yotpo-webrika.git/issues"
+  },
+  "homepage": "https://github.com/iwacheto/gatsby-source-yotpo-webrika.git#readme"
+}
