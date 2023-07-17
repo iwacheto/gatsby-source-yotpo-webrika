@@ -45,7 +45,11 @@ const createSchemaCustomization = async ({
     console.time((0, _utils.formatMsg)('finished fetching shopify products'));
     const shopifyProducts = await (0, _fetch.getShopifyProducts)(shopName, token);
     console.timeEnd((0, _utils.formatMsg)('finished fetching shopify products'));
-    const productIds = shopifyProducts.map(product => (0, _utils.decodeShopifyId)(product.id));
+    // const productIds = shopifyProducts.map(product => (0, _utils.decodeShopifyId)(product.id));
+     const productIds = shopifyProducts.map(product =>  {
+      const id = product.id.split('/')
+      return id[id.length - 1]
+    });
     console.time((0, _utils.formatMsg)('finished fetching yotpo reviews'));
     const reviews = await (0, _fetch.getReviews)({
       productIds,
